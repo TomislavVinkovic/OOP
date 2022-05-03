@@ -1,0 +1,28 @@
+#pragma once
+
+class MyVector {
+    protected:
+        unsigned int capacity;
+        unsigned int size;
+        int* arr;
+    public:
+        MyVector();
+        MyVector(int);
+        MyVector(const MyVector&);
+
+        unsigned int getSize() const;
+        unsigned int getCapacity() const;
+
+        void pushBack(int);
+        //int popBack(); //ovo moram implementirati
+
+        bool empty() const;
+        bool full() const;
+
+        int& at(unsigned int pos);
+        int& front();
+        int& back();
+
+        void print();
+        ~MyVector();
+};
